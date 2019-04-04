@@ -20,7 +20,7 @@ void roverFixCallback(const sensor_msgs::NavSatFix::ConstPtr& msg)
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "listener");
+    ros::init(argc, argv, "gnss_listener");
     ros::NodeHandle n;
 
     ros::Subscriber sub = n.subscribe("rover/fix", 100, roverFixCallback);
